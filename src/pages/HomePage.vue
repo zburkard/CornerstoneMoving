@@ -15,6 +15,26 @@
         <button class="btn btn-success m-3">Get a Free Quote!</button>
       </div>
     </div>
+    <section id="About">
+      <div class="row mt-5">
+        <h3 class="blue-font">About Us</h3>
+        <div class="d-flex">
+          <div class="col-md-6 justify-content-center card">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Accusantium magnam doloribus totam esse quis accusamus assumenda
+              dolor! Voluptas consequuntur accusantium laudantium, laborum
+              facilis, illum esse repellat, dolorum voluptate labore a.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <img src="" alt="" />
+            Placholder
+            <!-- TODO put an image in here -->
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
 </template>
 
@@ -33,6 +53,9 @@ export default {
   object-fit: cover;
   height: 50vh;
   // width: 80%;
+}
+.blue-font {
+  color: #00538e;
 }
 // .size {
 //   height: 60vh;
