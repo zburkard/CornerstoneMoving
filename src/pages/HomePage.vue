@@ -1,8 +1,18 @@
 <template>
   <section class="container-fluid mt-2">
     <div class="row justify-content-center mt-5">
-      <div class="col-10 hero rounded d-flex justify-content-end align-items-end">
-        <button class="btn btn-success quote m-3">Get a Free Quote!</button>
+      <div
+        class="
+          col-10
+          hero
+          size
+          rounded
+          d-flex
+          justify-content-end
+          align-items-end
+        "
+      >
+        <button class="btn btn-success m-3">Get a Free Quote!</button>
       </div>
     </div>
   </section>
@@ -11,20 +21,23 @@
 <script>
 export default {
   setup() {
-    return {}
-  }
-}
+    return {};
+  },
+};
 </script>
 
 <style scoped lang="scss">
-.hero{
+.hero {
   background-image: url(../assets/img/hero.png);
   background-repeat: no-repeat;
   object-fit: cover;
-  height: 60vh;
-  width: 80%;
+  height: 50vh;
+  // width: 80%;
 }
-.quote{
+// .size {
+//   height: 60vh;
+// }
+.quote {
   height: 7vh;
   width: 30vh;
 }
