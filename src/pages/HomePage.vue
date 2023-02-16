@@ -19,6 +19,8 @@ export default {
 <style scoped lang="scss">
 .hero{
   background-image: url(../assets/img/hero.png);
+  background-repeat: no-repeat;
+  object-fit: cover;
   height: 60vh;
   width: 80%;
 }
