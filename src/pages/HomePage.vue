@@ -18,21 +18,26 @@
     <section id="About">
       <div class="row mt-5">
         <h3 class="blue-font">About Us</h3>
-        <div class="d-flex">
-          <div class="col-md-6 justify-content-center card">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Accusantium magnam doloribus totam esse quis accusamus assumenda
-              dolor! Voluptas consequuntur accusantium laudantium, laborum
-              facilis, illum esse repellat, dolorum voluptate labore a.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <img src="" alt="" />
-            Placholder
-            <!-- TODO put an image in here -->
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 justify-content-center card">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Accusantium magnam doloribus totam esse quis accusamus assumenda
+            dolor! Voluptas consequuntur accusantium laudantium, laborum
+            facilis, illum esse repellat, dolorum voluptate labore a.
+          </p>
         </div>
+        <div class="col-md-4">
+          <img src="" alt="" />
+          Placeholder
+          <!-- TODO put an image in here -->
+        </div>
+      </div>
+    </section>
+    <section id="Schedule">
+      <div class="row mt-5">
+        <h3 class="blue-font text-end">Schedule Now</h3>
       </div>
     </section>
   </section>
