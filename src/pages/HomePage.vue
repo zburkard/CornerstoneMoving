@@ -45,33 +45,74 @@
         <h3 class="blue-font">Reviews</h3>
       </div>
       <div class="row">
-        <div class="col-md-4 card bg-blue">
-          <div class="row">
-            <div class="d-flex">
-              <i class="mdi mdi-star"></i>
-              <i class="mdi mdi-star"></i>
-              <i class="mdi mdi-star"></i>
-            </div>
-            <h5 class="text-white text-end">4.8/5</h5>
-          </div>
-          <div class="row">
-            <div class="col-md-11 card">
+        <div class="d-flex justify-content-evenly">
+          <div class="col-md-4 card bg-blue">
+            <div class="row">
               <div class="d-flex">
-                <h5>Tyler Rice</h5>
-                <img
-                  class="img-fluid profile-pic"
-                  src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                  alt=""
-                />
+                <i class="mdi mdi-star"></i>
+                <i class="mdi mdi-star"></i>
+                <i class="mdi mdi-star"></i>
               </div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Laborum corporis aspernatur minima illo earum dolore, fugiat
-                quaerat impedit laboriosam ex porro deserunt asperiores,
-                necessitatibus, eaque doloremque error id optio ea.
-              </p>
+              <div class="col-md-12">
+                <h2 class="text-white text-end me-4">4.8/5</h2>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-11 card">
+                <div class="d-flex">
+                  <h5>Tyler Rice</h5>
+                  <img
+                    class="img-fluid profile-pic"
+                    src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt=""
+                  />
+                </div>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Laborum corporis aspernatur minima illo earum dolore, fugiat
+                  quaerat impedit laboriosam ex porro deserunt asperiores,
+                  necessitatibus, eaque doloremque error id optio ea.
+                </p>
+              </div>
             </div>
           </div>
+          <div class="col-md-4 card bg-blue">
+            <div class="row">
+              <div class="d-flex">
+                <i class="mdi mdi-star"></i>
+                <i class="mdi mdi-star"></i>
+                <i class="mdi mdi-star"></i>
+              </div>
+              <div class="col-md-12">
+                <h2 class="text-white text-end me-4">4.8/5</h2>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-11 card">
+                <div class="d-flex">
+                  <h5>Zak Burkard</h5>
+                  <img
+                    class="img-fluid profile-pic"
+                    src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt=""
+                  />
+                </div>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Laborum corporis aspernatur minima illo earum dolore, fugiat
+                  quaerat impedit laboriosam ex porro deserunt asperiores,
+                  necessitatibus, eaque doloremque error id optio ea.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Contact">
+      <div class="row mt-5">
+        <div class="col-md-2">
+          <h3 class="blue-font underline">Contact Us</h3>
         </div>
       </div>
     </section>
@@ -98,6 +139,14 @@ export default {
     padding-right: 2rem;
   }
 }
+.underline {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px;
+  border-color: #00538e;
+  border-style: solid;
+}
 .blue-font {
   color: #00538e;
 }
@@ -117,5 +166,6 @@ export default {
   border-radius: 50%;
   height: 4rem;
   width: 4rem;
+  margin-left: 2rem;
 }
 </style>
