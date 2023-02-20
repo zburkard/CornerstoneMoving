@@ -1,4 +1,5 @@
 <template>
+  <Navbar @click="scroll" />
   <section class="container-fluid mt-2">
     <div class="row justify-content-center mt-5">
       <div class="col-md-8 hero">
@@ -6,29 +7,51 @@
         <button class="btn btn-success">Get a Free Quote!</button>
       </div>
     </div>
-    <section id="About">
-      <div class="row mt-5">
-        <h3 class="blue-font">About Us</h3>
+    <section ref="About" id="About">
+      <div class="row mt-5 ms-5">
+        <div class="col-md-2">
+          <h3 class="blue-font underline">About Us</h3>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 justify-content-center card">
+      <div class="row justify-content-around">
+        <div class="col-md-6 justify-content-center card m-2">
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Accusantium magnam doloribus totam esse quis accusamus assumenda
-            dolor! Voluptas consequuntur accusantium laudantium, laborum
-            facilis, illum esse repellat, dolorum voluptate labore a.
+            Welcome to Cornerstone Moving, a family-owned and operated moving
+            company. We have been serving the Boise, Idaho area for generations
+            and have built a reputation for providing exceptional moving
+            services at affordable prices. Our team of experienced movers is
+            dedicated to making your move as smooth and stress-free as possible.
+            Our company was founded by Nicky Pendleton, who saw a need for a
+            moving company that truly cared about its customers. At Cornerstone
+            Moving, we believe that every move is unique, and we strive to
+            customize our services to meet your specific needs. Our team of
+            professional movers is trained in the latest moving techniques and
+            equipped with the best equipment to ensure your belongings are
+            handled with the utmost care. We also offer a variety of packing and
+            storage solutions to make your move as convenient as possible. Our
+            goal is to make your move as seamless and stress-free as possible,
+            and we are dedicated to providing you with the highest level of
+            customer service. We take pride in our work and always strive to
+            exceed our customers' expectations. If you're looking for a reliable
+            and affordable moving company, look no further than Cornerstone.
+            Contact us today to schedule your move and experience the difference
+            that comes with working with a family-owned business.
           </p>
         </div>
-        <div class="col-md-4">
-          <img src="" alt="" />
-          Placeholder
-          <!-- TODO put an image in here -->
+        <div class="col-md-4 m-2">
+          <img
+            class="img-fluid moving-photo"
+            src="https://images.unsplash.com/photo-1601654717399-7486d5ebedca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1138&q=80"
+            alt=""
+          />
         </div>
       </div>
     </section>
-    <section id="Schedule">
-      <div class="row mt-5">
-        <h3 class="blue-font text-end">Schedule Now</h3>
+    <section ref="Schedule" id="Schedule">
+      <div class="row mt-5 me-5 justify-content-end">
+        <div class="col-md-2">
+          <h3 class="blue-font underline2">Schedule Now</h3>
+        </div>
       </div>
       <div class="row">
         <div class="d-flex justify-content-center">
@@ -40,9 +63,11 @@
         </div>
       </div>
     </section>
-    <section id="Reviews">
-      <div class="row mt-5">
-        <h3 class="blue-font">Reviews</h3>
+    <section ref="Reviews" id="Reviews">
+      <div class="row mt-5 ms-5">
+        <div class="col-md-2">
+          <h3 class="blue-font underline">Reviews</h3>
+        </div>
       </div>
       <div class="row">
         <div class="d-flex justify-content-evenly">
@@ -109,8 +134,8 @@
         </div>
       </div>
     </section>
-    <section id="Contact">
-      <div class="row mt-5">
+    <section ref="Contact" id="Contact">
+      <div class="row mt-5 ms-5">
         <div class="col-md-2">
           <h3 class="blue-font underline">Contact Us</h3>
         </div>
@@ -120,9 +145,29 @@
 </template>
 
 <script>
+import { AppState } from "../AppState";
 export default {
   setup() {
-    return {};
+    // function scroll() {
+    //   this.$refs.Contact;
+    //   let refName = AppState.pageSection;
+    //   console.log(this.$refs.refName);
+    //   let element = this.refName;
+    //   let top = element.offsetTop;
+
+    //   window.scrollTo(0, top);
+    // }
+    return {
+      scroll() {
+        debugger;
+        console.log("start", AppState.pageSection);
+        let section = AppState.pageSection;
+        console.log("alias", section);
+        let scrollHeight = document.getElementById(section).scrollHeight;
+        console.log("num", scrollHeight);
+        window.scrollTo(0, scrollHeight);
+      },
+    };
   },
 };
 </script>
@@ -143,7 +188,17 @@ export default {
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 1px;
+  border-bottom: 6px;
+  width: 9rem;
+  border-color: #00538e;
+  border-style: solid;
+}
+.underline2 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 6px;
+  width: 12rem;
   border-color: #00538e;
   border-style: solid;
 }
@@ -167,5 +222,9 @@ export default {
   height: 4rem;
   width: 4rem;
   margin-left: 2rem;
+}
+.moving-photo {
+  height: 25rem;
+  // width: 15rem;
 }
 </style>

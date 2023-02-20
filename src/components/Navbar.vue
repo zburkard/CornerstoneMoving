@@ -2,7 +2,12 @@
   <nav class="navbar navbar-expand-lg navbar-dark light px-3">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex flex-column align-items-center">
-        <img alt="logo" class="p-1 mt-2" src="../assets/img/cornerstone_logo.png" height="90" />
+        <img
+          alt="logo"
+          class="p-1 mt-2"
+          src="../assets/img/cornerstone_logo.png"
+          height="90"
+        />
       </div>
     </router-link>
     <button
@@ -16,19 +21,38 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarText">
+    <div
+      class="collapse navbar-collapse d-flex justify-content-between"
+      id="navbarText"
+    >
       <ul class="navbar-nav me-auto">
         <li>
-          <a href="#About" class="cstone rounded text-light selectable p-2 px-4 mx-4">About Us</a>
+          <a
+            @click="goTo('About')"
+            class="cstone rounded text-light selectable p-2 px-4 mx-4"
+            >About Us</a
+          >
         </li>
         <li>
-          <a href="#About" class="cstone rounded text-light selectable p-2 px-4 mx-4">Our Services</a>
+          <a
+            @click="goTo('Schedule')"
+            class="cstone rounded text-light selectable p-2 px-4 mx-4"
+            >Check Our Schedule</a
+          >
         </li>
         <li>
-          <a href="#About" class="cstone rounded text-light selectable p-2 px-4 mx-4">Check Our Schedule</a>
+          <a
+            @click="goTo('Reviews')"
+            class="cstone rounded text-light selectable p-2 px-4 mx-4"
+            >Reviews</a
+          >
         </li>
         <li>
-          <a href="#About" class="cstone rounded text-light selectable p-2 px-4 mx-4">Contact Us</a>
+          <a
+            @click="goTo('Banana')"
+            class="cstone rounded text-light selectable p-2 px-4 mx-4"
+            >Contact Us</a
+          >
         </li>
       </ul>
       <!-- LOGIN COMPONENT HERE -->
@@ -38,13 +62,19 @@
 </template>
 
 <script>
-import Login from './Login.vue'
+import { pageService } from "../services/PageService";
+import Login from "./Login.vue";
 export default {
   setup() {
-    return {}
+    return {
+      goTo(refName) {
+        console.log(refName);
+        pageService.goTo(refName);
+      },
+    };
   },
-  components: { Login }
-}
+  components: { Login },
+};
 </script>
 
 <style scoped>
@@ -67,8 +97,7 @@ a:hover {
     height: 64px;
   }
 }
-.cstone{
-  background-color: #00538E;
+.cstone {
+  background-color: #00538e;
 }
-
 </style>
