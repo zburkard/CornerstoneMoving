@@ -3,7 +3,7 @@
   <main>
     <router-view />
   </main>
-  <footer class="bg-dark text-light">Made with 💖 by CodeWorks</footer>
+  <footer class="bg-dark text-light">Cornerstone Moving Company</footer>
 </template>
 
 <script>
@@ -16,13 +16,6 @@ export default {
     return {
       appState: computed(() => AppState),
       pageSection: computed(() => AppState.pageSection),
-
-      // scroll() {
-      //   debugger;
-      //   let section = AppState.pageSection;
-      //   let top = section;
-      //   window.scrollTo(0, top);
-      // },
     };
   },
   components: { Navbar },
